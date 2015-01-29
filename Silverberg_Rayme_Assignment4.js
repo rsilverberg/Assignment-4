@@ -22,6 +22,8 @@ if (length === 12 && characterAt3 === "-" && characterAt7 === "-" && isNaN(first
 
 }
 
+isPhoneNumber("1234213456");
+
 // Title-case a string (split into words, then uppercase the first letter of each word).
 function titleCase(args) {
     var originalString = args;
@@ -39,4 +41,16 @@ function titleCase(args) {
 function returnNumber(args) {
     var stringNumber = args;
     return parseInt(stringNumber); 
-}   
+}
+
+// Given a string that is a list of things separated by a given string, as well as another string separator, return a string with the first separator changed to the second: “a,b,c” + “,” + “/” --> “a/b/c”.
+function newSymbol(args, args2, arg3) {
+    var originalString = args;
+    var oldCharacter = args2;
+     var newCharacter = args3;
+     
+    var noMoreCharacter = originalString.split(oldCharacter);
+    var newString = noMoreCharacter.join(newCharacter);
+    
+    return newString;
+}
