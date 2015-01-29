@@ -54,3 +54,16 @@ function newSymbol(args, args2, arg3) {
     
     return newString;
 }
+
+//Is the string a URL (Does it start with http:// or https://)?
+function isUrl(args) {
+    var url = args
+    var firstCheck = url.substr(0,6)
+    var secondCheck = url.substr(0,7)
+    
+if (firstCheck === "http://" || secondCheck ==="https://") {
+    return true;    
+}else{
+    return false;
+}
+}
