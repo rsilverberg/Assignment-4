@@ -47,7 +47,7 @@ function returnNumber(args) {
 function newSymbol(args, args2, arg3) {
     var originalString = args;
     var oldCharacter = args2;
-     var newCharacter = args3;
+    var newCharacter = args3;
      
     var noMoreCharacter = originalString.split(oldCharacter);
     var newString = noMoreCharacter.join(newCharacter);
@@ -67,3 +67,12 @@ if (firstCheck === "http://" || secondCheck ==="https://") {
     return false;
 }
 }
+
+//Format a number to use a specific number of decimal places as for money: 2.1 --> 2.10.
+function roundNumber(args, args2) {
+    var givenNumber = args
+    var decimalPlace = args2
+    return givenNumber.toFixed(decimalPlace);
+
+}
+
